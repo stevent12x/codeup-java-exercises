@@ -24,4 +24,3 @@ public class ControlFlowExercises {
 }
 ;
 
-this is just for test purposes
