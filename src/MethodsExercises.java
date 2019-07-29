@@ -57,7 +57,8 @@ public class MethodsExercises {
         int userInput = facScanner.nextInt();
         int counter = 1;
         for (int i = 1; i <= userInput; i+=1) {
-            System.out.println(i+(counter*i));
+            counter++;
+            System.out.println(i*(counter));
         }
     }
 }
