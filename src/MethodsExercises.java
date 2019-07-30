@@ -64,8 +64,19 @@ public class MethodsExercises {
             if (!scanner.nextLine().toUpperCase().contains("Y")) return;
         } while (true);
     }
-    private static void factorialChart(int fact) {
+    private static void factorialChart(int num) {
 
+        long fact = 1;
+
+        for (int i = 1; i <= num; i++) {
+            fact = 1;
+            System.out.print(i + "! = ");
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " x ");
+                fact *= j;
+            }
+            System.out.println(" = " + fact);
+        }
     }
 
 
