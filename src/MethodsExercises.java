@@ -1,64 +1,87 @@
 import java.util.Scanner;
-
 public class MethodsExercises {
-    //    public static int add(int a, int b) {
-//        System.out.println(a + b);
-//        return a+b;
-//    }
-//    public static  int subtract(int a, int b) {
-//        System.out.println(a - b);
-//        return a-b;
-//    }
-//    public static int multiply(int a, int b) {
-//        System.out.println(a*b);
-//        return a*b;
-//    }
-//    public static int divide(int a, int b) {
-//        System.out.println(a/b);
-//        return a/b;
-//    }
-//    public static int modulus(int a, int b) {
-//        System.out.println(a%b);
-//        return a%b;
-//    }
-//
-//    public static void main(String[] args) {
-//        multiply(5,6);
-//        subtract(8,6);
-//        add(8, 4);
-//        divide(300, 50);
-//        modulus(4,5);
-//    }
 
-    public static int getInteger(int min, int max, int userinput) {
-        if (userinput == max || userinput == min) {
-            System.out.println("All done!");
-            return userinput;
-        } else if (userinput > max || userinput < min) {
-            System.out.println("Try again");
-            return 0;
-        } else {
-            System.out.println("computing...");
-        }
-        return getInteger(min, max - 1, userinput);
+    public static double add(double a, double b) {
+        return a + b;
+    }
+
+    public static double subtract(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiply(double a, double b) {
+//        return a*b;
+
+        // Multiplication without the '*' operator //
+//        double result = 0;
+//        for (int i = 0; i < b; i++) {
+//            result +=a;
+//        }
+//        return result;
+
+        // Recursion Method //
+        if (b <= 0) return 0;
+        return a + multiply(a, b - 1);
+    }
+
+    public static double divide(double a, double b) {
+        return a / b;
+    }
+
+    public static double modulus(double a, double b) {
+        return a % b;
+    }
+
+
+    // check to see if a number is between min and max numbers //
+    public static int getInteger(int min, int max) {
+        int userInput;
+        Scanner scanner = new Scanner(System.in);
+
+//        do {
+//            userInput = scanner.nextInt();
+//            if (userInput >= min && userInput <= max) break;
+//        } while (true);
+//        return userInput;
+
+        // recursive method //
+        userInput = scanner.nextInt();
+        if (userInput < min || userInput > max)
+            return getInteger(1, 10);
+        return userInput;
+    }
+
+    // Factorial //
+
+    private static void getFactorial() {
+        Scanner scanner = new Scanner(System.in);
+        do {
+            int fact = getInteger(1, 10);
+
+            factorialChart(fact);
+
+            System.out.println("Play again?");
+            if (!scanner.nextLine().toUpperCase().contains("Y")) return;
+        } while (true);
+    }
+    private static void factorialChart(int fact) {
 
     }
-//
-//    public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.print("Enter a number between 1 and 10: ");
-//        int userinput = scanner.nextInt();
-//        getInteger(1, 10, userinput);
-//    }
+
 
     public static void main(String[] args) {
-        Scanner facScanner = new Scanner(System.in);
+        int a=16;
+        int b=5;
+        System.out.println(multiply(a,b));
+        System.out.println(subtract(a,b));
+        System.out.println(add(a,b));
+        System.out.println(divide(a,b));
+        System.out.println(modulus(a,b));
+
         System.out.println("Enter a number between 1 and 10");
-        int userInput = facScanner.nextInt();
-        int counter = 1;
-        for (int i = 1; i <= userInput; i+=1) {
-            counter++;
-            System.out.println(i*(counter));
-        }
+        int userInput = getInteger(1, 10);
+
+        getFactorial();
     }
+
 }
