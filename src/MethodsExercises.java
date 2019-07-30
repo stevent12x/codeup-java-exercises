@@ -79,6 +79,17 @@ public class MethodsExercises {
         }
     }
 
+    // Roll Dice //
+    private static int rollDie(int sides) {
+        return (int) Math.ceil(Math.random() * sides);
+    }
+    private static void rollDice() {
+        System.out.println("Roll em high! Roll em low! How many sides to the dice that you roll?");
+        int sides = getInteger(4,20);
+        int die1 = rollDie(sides);
+        int die2 = rollDie(sides);
+        System.out.printf("You rolled a %d and a %d. %n", die1, die2);
+    }
 
     public static void main(String[] args) {
         int a=16;
@@ -93,6 +104,7 @@ public class MethodsExercises {
         int userInput = getInteger(1, 10);
 
         getFactorial();
+        rollDice();
     }
 
 }
