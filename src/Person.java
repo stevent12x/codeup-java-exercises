@@ -14,8 +14,7 @@ class Person {
             System.out.printf("Hello from %s %n", name);
         }
 
-        private Person (String n) {;
-        }
+        private Person (String n) {}
 
         public static void main(String[] args) {
             Person steve = new Person("Steve");
