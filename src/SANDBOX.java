@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class SANDBOX {
     public static void main(String[] args) {
 
@@ -9,6 +12,10 @@ public class SANDBOX {
 
     for (String beatle : beatles) {
         System.out.println(beatle);
-    }
+        }
+
+    String[] ourNewArray = Arrays.copyOf(beatles, 8);
+        for (String item : ourNewArray)
+            System.out.println(item);
     }
 }
