@@ -3,7 +3,7 @@ class Person {
 
         // returns the person's name
         public String getName() {
-            return name;
+            return this.name;
         }
         // changes the name property to the passed value
         public void setName (String name) {
@@ -11,17 +11,19 @@ class Person {
         }
         // prints a message to the console using the person's name
          public void sayHello () {
-            System.out.printf("Hello from %s %n", name);
+            System.out.printf("Hello from %s \n\n", name);
         }
 
-        private Person (String n) {}
+        public Person (String name) {
+            this.name = name;
+        }
 
         public static void main(String[] args) {
-            Person steve = new Person("Steve");
-            steve.name = "Steven";
-            steve.setName("Karen");
-            System.out.println(steve.getName());
-            steve.sayHello();
+            Person steven = new Person("Steve");
+            System.out.println(steven.getName());
+            steven.sayHello();
+            steven.setName("Cody the Duck");
+            steven.sayHello();
 //
 //            Person person1 = new Person("John");
 //            Person person2 = new Person("John");
@@ -32,13 +34,13 @@ class Person {
 //            Person person2 = person1;
 //            System.out.println(person1 == person2);
 
-            Person person1 = new Person("John");
-            Person person2 = person1;
-            System.out.println(person1.getName());
-            System.out.println(person2.getName());
-            person2.setName("Jane");
-            System.out.println(person1.getName());
-            System.out.println(person2.getName());
+//            Person person1 = new Person("John");
+//            Person person2 = person1;
+//            System.out.println(person1.getName());
+//            System.out.println(person2.getName());
+//            person2.setName("Jane");
+//            System.out.println(person1.getName());
+//            System.out.println(person2.getName());
         }
     }
 
