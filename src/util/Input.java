@@ -47,6 +47,7 @@ public class Input {
     public double getDouble() {
         System.out.println("Enter a double");
         double userInput = scanner.nextDouble();
+//        System.out.println(userInput);
         return userInput;
     }
 
@@ -55,7 +56,7 @@ public class Input {
         Input scan1 = new Input();
 
 
-        scan1.yesOrNo();
+        scan1.getDouble();
     }
 }
 
