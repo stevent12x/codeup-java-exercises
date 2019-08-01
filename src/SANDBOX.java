@@ -4,18 +4,46 @@ import java.util.Arrays;
 public class SANDBOX {
     public static void main(String[] args) {
 
-    String[] beatles = new String[4];
-    beatles[0] = "John";
-    beatles[1] = "George";
-    beatles[2] = "Ringo";
-    beatles[3] = "Paul";
-
-    for (String beatle : beatles) {
-        System.out.println(beatle);
+    class Person {
+        private String name;
+        public Person(String name) {
+            this.name = name;
         }
+        public String getName() {
+            return name;
+        }
+    }
+    class SuperHero extends Person {
+        private String alterEgo;
+        public SuperHero(String name, String alterEgo) {
+            super(name);
+            this.alterEgo = alterEgo;
+        }
+        public String getName() {
+            return alterEgo;
+        }
+        public String getSecretIdentity() {
+            return super.getName();
+        }
+    }
+    class SuperVillain extends Person {
+        private String alterEgo;
+        public SuperVillain(String name, String alterEgo) {
+            super(name );
+            this.alterEgo = alterEgo;
+        }
+        public String getName() {
+            return alterEgo;
+        }
+        public String getSecretIdentity() {
+            return super.getName();
+        }
+    }
 
-    String[] ourNewArray = Arrays.copyOf(beatles, 8);
-        for (String item : ourNewArray)
-            System.out.println(item);
+
+        SuperVillain drButtStuff = new SuperVillain("Brad", "Dr. Butt Stuff");
+
+        System.out.printf("Oh no! It's %s!\n", drButtStuff.getName());
+        System.out.printf("Oh wait, it's just %s.", drButtStuff.getSecretIdentity());
     }
 }
