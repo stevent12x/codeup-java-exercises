@@ -1,22 +1,23 @@
 package movies;
 
 public class Movie{
-
     private String Name;
     private String Category;
 
-    public Movie (String movieName) {
-        Name = movieName;
-        Category = "unassigned";
+    public Movie(String name, String category) {
+        Name = name;
+        Category = category;
     }
 
-    public Movie (String movieName, String movieCategory) {
-        Name = movieName;
-        Category = movieCategory;
+    public Movie(String name) {
+        Name = name;
     }
 
-    public String getInfo() {
-        return String.format("Title: %s \n Category: %s", Name, Category);
+    public String getName() {
+        return Name;
     }
 
+    public String getCategory() {
+        return Category;
+    }
 }

@@ -1,4 +1,5 @@
 package movies;
+
 import java.util.Scanner;
 
 public class MoviesApplication{
@@ -15,9 +16,9 @@ public class MoviesApplication{
                         "4  -  View all Horror Movies\n" +
                         "5  -  View all SciFi Movies\n\n" +
                         "Enter Your Choice: ");
-        int userInput = scanner.nextInt();
+        String userInput = scanner.nextLine();
 
-        System.out.println("You picked " + userInput);
-
+        if (userInput.equalsIgnoreCase("1")) {
+        }
     }
 }
