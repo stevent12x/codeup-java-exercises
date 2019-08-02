@@ -1,21 +1,20 @@
 package shapes;
 
-public class Square extends Rectangle{
-    private long side;
-    private long perimeter;
-    private long area;
+public class Square extends Quadrilateral{
 
-    public Square(long side) {
-        super(side, side);
+    protected Square(double length, double width) {
+        super(length, width);
     }
-
-    public long getPerimeter() {
-        perimeter = 4*side;
-        return perimeter;
+    public double setLength(double length) {
+        return this.length;
     }
-
-    public long getArea(){
-        area = side*side;
-        return area;
+    public double setWidth(double width) {
+        return this.width;
+    }
+    public double getPerimeter() {
+        return length*2 + width*2;
+    }
+    public double getArea() {
+        return length*width;
     }
 }
