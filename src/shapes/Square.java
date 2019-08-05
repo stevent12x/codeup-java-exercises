@@ -2,15 +2,15 @@ package shapes;
 
 public class Square extends Quadrilateral{
 
-    protected Square(double length, double width) {
-        super(length, width);
+    protected Square(double side) {
+        super(side, side);
     }
-    public void setLength() {}
-    public void setWidth() {}
+    public void setLength(){}
+    public void setWidth(){}
     public double getPerimeter() {
-        return length*2 + width*2;
+        return 4* this.length;
     }
     public double getArea() {
-        return length*width;
+        return this.width * this.width;
     }
 }
