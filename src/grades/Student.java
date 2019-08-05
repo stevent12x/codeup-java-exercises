@@ -6,7 +6,7 @@ public class Student {
     // Student Properties
     private String firstName;
     private String lastName;
-    private ArrayList grades;
+    private ArrayList<Integer> grades;
 
     // Student Constructor
     public Student(String lastName, String firstName) {
@@ -17,16 +17,24 @@ public class Student {
 
     // Student Methods
     public String getName(){
-        return firstName + ", " + lastName;
+        return firstName + " " + lastName;
     }
     public void addGrade(int grade) {
         grades.add(grade);
     }
     public double getGradeAverage() {
-        int gradeAverage = 0;
-        for (int i = 0; i<grades.size(); i++) {
-            grades[i] += gradeAverage;
+        double gradeAverage = 0;
+        for (Integer grade : grades) {
+            gradeAverage += grade;
         }
         return (gradeAverage/grades.size());
+    }
+
+
+    public static void main(String[] args) {
+        Student patrick = new Student("Starfish", "Patrick");
+        Student sandy = new Student("Cheeks", "Samantha");
+        Student steven = new Student("Turner", "Steven");
+        Student katie = new Student("Wise", "Katelin");
     }
 }
