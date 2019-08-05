@@ -21,25 +21,13 @@ public class GradesApplication {
 
         // Student Grades
         /* Patrick */
-        patrick.addGrade(24);
-        patrick.addGrade(51);
-        patrick.addGrade(63);
-        patrick.addGrade(30);
+        patrick.addGrade(24);patrick.addGrade(51);patrick.addGrade(63);patrick.addGrade(30);patrick.addGrade(27);patrick.addGrade(3);patrick.addGrade(53);
         /* Sandy */
-        sandy.addGrade(101);
-        sandy.addGrade(99);
-        sandy.addGrade(105);
-        sandy.addGrade(100);
+        sandy.addGrade(101);sandy.addGrade(99);sandy.addGrade(105);sandy.addGrade(100);sandy.addGrade(100);sandy.addGrade(99);sandy.addGrade(98);sandy.addGrade(93);
         /* Steven */
-        steven.addGrade(89);
-        steven.addGrade(93);
-        steven.addGrade(75);
-        steven.addGrade(96);
+        steven.addGrade(89);steven.addGrade(93);steven.addGrade(75);steven.addGrade(96);steven.addGrade(85);steven.addGrade(95);steven.addGrade(98);
         /*Katie */
-        katie.addGrade(92);
-        katie.addGrade(97);
-        katie.addGrade(100);
-        katie.addGrade(96);
+        katie.addGrade(92);katie.addGrade(97);katie.addGrade(100);katie.addGrade(96);katie.addGrade(88);katie.addGrade(96);katie.addGrade(100);katie.addGrade(91);
 
         // Adding New Students to students Hash Map
         students.put(patrick.getGitHubUN(), patrick);
@@ -47,16 +35,16 @@ public class GradesApplication {
         students.put(steven.getGitHubUN(), steven);
         students.put(katie.getGitHubUN(), katie);
 
-        System.out.println("students.keySet() = " + students.keySet());
-
         // Print github usernames
 
         boolean keepGoing = true;
 
         while (keepGoing) {
 
-            System.out.println("gitHub usernames = " + students.keySet());
-            System.out.println("Which user would you like to know more about? [Enter Username or 'Quit' to stop.]");
+            for (String student : students.keySet()) {
+                System.out.println("gitHub username = " + student);
+            }
+            System.out.println("\nWhich user would you like to know more about? [Enter Username or 'Quit' to stop.]");
             String userInput = scanner.nextLine();
 
             for (String student : students.keySet()) {
