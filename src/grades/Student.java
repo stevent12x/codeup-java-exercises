@@ -1,4 +1,5 @@
 package grades;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 // Student Class
@@ -34,6 +35,9 @@ public class Student {
     public String getGitHubUN() {
         return gitHubUN;
     }
+    public String getGrades(){
+        return grades.toString();
+    }
 
 
     public static void main(String[] args) {
@@ -46,5 +50,7 @@ public class Student {
         sandy.addGrade(101);sandy.addGrade(99);sandy.addGrade(105);sandy.addGrade(100);
         steven.addGrade(89);steven.addGrade(93);steven.addGrade(75);steven.addGrade(96);
         katie.addGrade(92);katie.addGrade(97);katie.addGrade(100);katie.addGrade(96);
+
+        System.out.println("katie.getGrades() = " + katie.getGrades());
     }
 }

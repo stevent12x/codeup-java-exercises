@@ -41,20 +41,16 @@ public class GradesApplication {
         students.put(katie.getGitHubUN(), katie);
 
         // Print github usernames
-
-
         System.out.println("gitHub usernames = " + students.keySet());
         System.out.println("Which user would you like to know more about?");
+            String userInput = scanner.nextLine();
 
-        String userInput = scanner.nextLine();
-
-        for (String student: students.keySet()) {
-            if (userInput.equalsIgnoreCase(student)) {
-                System.out.println(students.get(student).getName() + " has a GPA of : " + students.get(student).getGradeAverage());
-                break;
-            } else if (userInput != student){
-                System.out.printf("");
+            for (String student : students.keySet()) {
+                if (userInput.equalsIgnoreCase(student)) {
+                    System.out.println(students.get(student).getName() + "'s grades are: " + students.get(student).getGrades() + ", for a GPA of : " + students.get(student).getGradeAverage());
+                } else if (userInput != student) {
+                    System.out.printf("");
+                }
             }
         }
     }
-}
