@@ -38,9 +38,7 @@ public class GradesApplication {
         // Print github usernames
 
         boolean keepGoing = true;
-
         while (keepGoing) {
-
             for (String student : students.keySet()) {
                 System.out.println("\ngitHub username = " + student);
             }
