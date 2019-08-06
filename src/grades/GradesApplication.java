@@ -42,9 +42,9 @@ public class GradesApplication {
         while (keepGoing) {
 
             for (String student : students.keySet()) {
-                System.out.println("gitHub username = " + student);
+                System.out.println("\ngitHub username = " + student);
             }
-            System.out.println("\nWhich user would you like to know more about? [Enter Username or 'Quit' to stop.]");
+            System.out.println("\nWhich user would you like to know more about? [Enter student Username to see info about a specific student, 'See All' to see all student grades, or 'Quit' to stop.]");
             String userInput = scanner.nextLine();
 
             for (String student : students.keySet()) {
@@ -53,8 +53,10 @@ public class GradesApplication {
                     keepGoing = false;
                     break;
                 } else if (userInput.equalsIgnoreCase(student)) {
-                    System.out.println(students.get(student).getName() + "'s grades are: " + students.get(student).getGrades() + ", for a GPA of : " + students.get(student).getGradeAverage() + "\n\n");
-                } else if (userInput != student) {
+                    System.out.printf(students.get(student).getName() + "'s grades are: " + students.get(student).getGrades() + ", for a GPA of : %.4s\n\n", students.get(student).getGradeAverage());
+                } else if (userInput.equalsIgnoreCase("see all")) {
+                    System.out.println(students.get(student).getName() + " = " + students.get(student).getGrades());
+                } else if (userInput != student || !userInput.equalsIgnoreCase("see all")) {
                     System.out.printf("");
                 }
             }

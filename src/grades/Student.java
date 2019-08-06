@@ -13,7 +13,6 @@ public class Student {
     private String gitHubUN;
     private ArrayList<Integer> grades;
 
-
     // Student Constructor
     public Student(String lastName, String firstName, String gitHubUN) {
         this.firstName = firstName;
@@ -21,18 +20,17 @@ public class Student {
         this.gitHubUN = gitHubUN;
         this.grades = new ArrayList<>();
     }
-
     // Student Methods
     public String getName(){return this.firstName + " " + this.lastName;}
     public void addGrade(int grade) {
         this.grades.add(grade);
     }
     public double getGradeAverage() {
-        double gradeAverage = 0;
-        for (Integer grade : grades) {
-            gradeAverage += grade;
+        double gradesTotal = 0;
+        for (Integer grade : this.grades) {
+            gradesTotal += grade;
         }
-        return (gradeAverage/grades.size());
+        return (gradesTotal/this.grades.size());
     }
     public String getGitHubUN() {
         return this.gitHubUN;
@@ -40,5 +38,4 @@ public class Student {
     public String getGrades(){
         return this.grades.toString();
     }
-
 }
