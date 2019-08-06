@@ -48,14 +48,18 @@ public class GradesApplication {
             String userInput = scanner.nextLine();
 
             for (String student : students.keySet()) {
+                String studentName = students.get(student).getName();
+                String studentGrades = students.get(student).getGrades();
+                Double studentGradeAvg = students.get(student).getGradeAverage();
+
                 if (userInput.equalsIgnoreCase("Quit")) {
                     System.out.println("Bye bye.");
                     keepGoing = false;
                     break;
                 } else if (userInput.equalsIgnoreCase(student)) {
-                    System.out.printf(students.get(student).getName() + "'s grades are: " + students.get(student).getGrades() + ", for a GPA of : %.4s\n\n", students.get(student).getGradeAverage());
+                    System.out.printf(studentName + "'s grades are: " + studentGrades + ", for a GPA of : %.5s\n\n", studentGradeAvg);
                 } else if (userInput.equalsIgnoreCase("see all")) {
-                    System.out.println(students.get(student).getName() + " = " + students.get(student).getGrades());
+                    System.out.println(studentName + " = " + studentGrades);
                 } else if (userInput != student || !userInput.equalsIgnoreCase("see all")) {
                     System.out.printf("");
                 }
