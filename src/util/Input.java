@@ -3,8 +3,7 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-
-    private Scanner scanner;
+    public Scanner scanner;
 
     public Input() {
         scanner = new Scanner(System.in);
@@ -15,6 +14,7 @@ public class Input {
         String userInput = scanner.nextLine();
         return userInput;
     }
+
     public boolean yesOrNo() {
         System.out.println("Enter yes or no");
         String userInput = scanner.nextLine();
@@ -26,6 +26,7 @@ public class Input {
             }
         } while (true);
     }
+
     public int getInt(int min, int max) {
         int userInput;
         System.out.printf("Enter a number between %s and %s", min, max);
@@ -35,28 +36,35 @@ public class Input {
         } while (true);
         return userInput;
     }
-    public double getDouble(double min, double max) {
-        double userInput;
-        System.out.printf("Enter a number with decimals between %s and %s", min, max);
-        do {
-            userInput = scanner.nextDouble();
-            if (userInput >= min && userInput <= max) break;
-        } while (true);
-        return userInput;
-    }
+//
+//    public double getDouble(double min, double max) {
+//        double userInput;
+//            System.out.printf("Enter a number with decimals between %s and %s", min, max);
+//            do {
+//                userInput = scanner.nextDouble();
+//                if (userInput >= min && userInput <= max) break;
+//            } while (true);
+//            return userInput;
+//        }
+
     public double getDouble() {
         System.out.println("Enter a double");
         double userInput = scanner.nextDouble();
+
+        try {
+            System.out.println("Enter a double");
+        } catch (NumberFormatException ex) {
+            System.out.printf("&s is not a valid number", ex);
+        } finally {
 //        System.out.println(userInput);
+            System.out.println("good jorb");
+        }
         return userInput;
     }
-
-
-    public static void main(String[] args) {
-        Input scan1 = new Input();
-
-
-        scan1.getDouble();
+    public void main(String[] args) {
+        getDouble();
+        return userInput;
+        Double.valueOf(userInput);
     }
 }
 
