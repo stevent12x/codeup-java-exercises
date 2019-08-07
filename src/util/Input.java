@@ -1,23 +1,23 @@
 package util;
-
 import java.util.Scanner;
 
 public class Input {
     public Scanner scanner;
-
     public Input() {
         scanner = new Scanner(System.in);
     }
 
     public String getString() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string");
-        String userInput = scanner.nextLine();
+        String userInput = sc.nextLine();
         return userInput;
     }
 
     public boolean yesOrNo() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter yes or no");
-        String userInput = scanner.nextLine();
+        String userInput = sc.nextLine();
         do {
             if (userInput.toUpperCase().contains("Y")) {
                 return true;
@@ -27,44 +27,39 @@ public class Input {
         } while (true);
     }
 
-    public int getInt(int min, int max) {
-        int userInput;
-        System.out.printf("Enter a number between %s and %s", min, max);
-        do {
-            userInput = scanner.nextInt();
-            if (userInput >= min && userInput <= max) break;
-        } while (true);
-        return userInput;
+    public static int getInt(int min, int max){
+        int userInput = 0;
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.printf("Enter a number between %s and %s\n", min, max);
+            do {
+                userInput = Integer.valueOf(sc.nextLine());
+                if (userInput >= min && userInput <= max)
+                    return userInput;
+            } while (true);
+        } catch (NumberFormatException ex) {
+            System.out.println("Number Format Exception - Must Enter Int!");
+        } finally {
+            System.out.println("Keep it up Buttercup!");
+        } return userInput;
     }
-//
-//    public double getDouble(double min, double max) {
-//        double userInput;
-//            System.out.printf("Enter a number with decimals between %s and %s", min, max);
-//            do {
-//                userInput = scanner.nextDouble();
-//                if (userInput >= min && userInput <= max) break;
-//            } while (true);
-//            return userInput;
-//        }
 
-    public double getDouble() {
-        System.out.println("Enter a double");
-        double userInput = scanner.nextDouble();
-
+    public static double getDouble() {
+        double userInput = 0;
+        Scanner sc = new Scanner(System.in);
         try {
             System.out.println("Enter a double");
+             userInput = Double.valueOf(sc.nextLine());
         } catch (NumberFormatException ex) {
-            System.out.printf("&s is not a valid number", ex);
+            System.out.println("Number Format Exception! - Must enter Double!");
         } finally {
-//        System.out.println(userInput);
-            System.out.println("good jorb");
-        }
-        return userInput;
+            System.out.println("You're doing great and you're super good looking to boot!");
+        } return userInput;
     }
-    public void main(String[] args) {
-        getDouble();
-        return userInput;
-        Double.valueOf(userInput);
+
+    public static void main(String[] args) {
+        System.out.println("You're Double is: " + getDouble());
+        System.out.println("You're Integer is " + getInt(1, 20));
     }
 }
 
