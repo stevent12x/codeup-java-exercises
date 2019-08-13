@@ -11,3 +11,5 @@ sales DOUBLE ,
 genre VARCHAR(100),
 PRIMARY KEY (id)
 );
+
+--testing for GitKraken--
