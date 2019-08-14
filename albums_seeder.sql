@@ -30,7 +30,7 @@ insert into albums
     ("Bruce Springsteen", "Born in the U.S.A.", 1985, 19.6, "Heartland Rock"),
     ("Dire Straights", "Brothers in Arms", 1985, 17.7, "Roots Rock, Blues Rock, Soft Rock"),
     ("James Horner", "Titanic: The Motion Picture Soundtrack", 1997, 18.1, "Film Score"),
-    ("metallica", "Metallica", 1991, 25.2, "Heavy Metal"),
+    ("Metallica", "Metallica", 1991, 25.2, "Heavy Metal"),
     ("Nirvana", "Nevermind", 1991, 16.7, "Grunge, Alternative Rock"),
     ("Pink Floyd", "The Wall", 1979, 19.7, "Progressive Rock"),
     ("Santana", "Supernatural", 1999, 20.5, "Latin Rock"),
