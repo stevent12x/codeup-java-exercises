@@ -8,7 +8,7 @@ insert into albums
     ('Michael Jackson' , 'Thriller' , 1982 , 47.3 , 'Pop , Rock , R&B'),
     ('Eagles' , 'Hotel California' , 1976 , 31.5 , 'Soft Rock'),
     ('AC/DC' , 'Back in Black' , 1980 , 26.1 , 'Hard Rock'),
-    ('Pink Floyd' , 'The Dark Side of the Moon' , 1973 , 24.2 , 'Prlogressive Rock'),
+    ('Pink Floyd' , 'The Dark Side of the Moon' , 1973 , 24.2 , 'Progressive Rock'),
     ('Whitney Houston', 'The Bodyguard' , 1992 , 28.4 , 'R&B, Soul, Pop, Soundtrack'),
     ('Meat Loaf' , 'Bat Out of Hell', 1977 , 21.5 , 'Hard Rock, Glam Rock, Heavy Metal'),
     ('Bee Gees' , 'Saturday Night Fever', 1977, 21.6, 'Disco'),
