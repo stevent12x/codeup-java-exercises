@@ -59,7 +59,8 @@ SELECT * from employees
 WHERE last_name
           LIKE 'E%e';
 
-SELECT concat(first_name, ' ', last_name,'  ', datediff(curdate(), hire_date)) from employees
+SELECT *, datediff(curdate(), hire_date) as 'days_in_the_company'
+from employees
 WHERE birth_date
     LIKE '%12-25'
   AND hire_date
