@@ -23,4 +23,3 @@ SELECT COUNT(*), gender from employees
 WHERE first_name IN
 ('Irena','Vidya','Maya')
 GROUP BY gender;
-
