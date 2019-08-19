@@ -38,6 +38,6 @@ FROM departments as d
 WHERE dm.to_date = '9999-01-01' and s.to_date = '9999-01-01'
 ORDER BY Salary DESC ;
 
-SELECT * from employees;
-
+SELECT * from e.first_name as "Emp Name", d.dept_name as "Dept Name"
+    JOIN employees e on e.emp_no = d.
 

@@ -1,4 +1,4 @@
-USE titles;
+USE employees;
 
 SELECT DISTINCT title
 FROM titles;
